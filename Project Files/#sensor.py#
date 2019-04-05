@@ -1,0 +1,17 @@
+#!/user/bin/python
+import smbus
+import time
+bus = smbus.SMBus(1)
+DEVICE_ADDRESS = 0x29
+DEVICE_REG_MODE1 = 0xC2
+
+#Write a single register
+#bus.write_byte_data(DEVICE_ADDRESS, DEVICE_REG_MODE1, 0x80)
+
+#Write an array of registers
+#ledout_values = [0xff, 0xff, 0xff, 0xff]
+
+while True:
+	data=bus.read_i2c_block_data(DEVICE_ADDRESS, DEVICE_REG_MODE1)
+	print(data)
+	time.sleep(0.01)
