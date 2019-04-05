@@ -27,3 +27,6 @@ We ran into a roadblock at the beginning of the project with the joystick refusi
 - Luma.OLED: Display drivers for SSD1306: [Link](https://github.com/rm-hull/luma.oled)
 - Python Imaging Library: [Link](https://github.com/python-pillow/Pillow)
 - VL53L0X Api port for Raspberry Pi: [Link](https://github.com/cassou/VL53L0X_rasp)
+
+### Useful Links
+- Using A Joystick On The Raspberry Pi Using An MCP3008: [Link](https://www.raspberrypi-spy.co.uk/2014/04/using-a-joystick-on-the-raspberry-pi-using-an-mcp3008/)
