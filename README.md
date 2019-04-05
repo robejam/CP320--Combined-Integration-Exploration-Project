@@ -25,4 +25,5 @@ We ran into a roadblock at the beginning of the project with the joystick refusi
 
 ### Libraries Used
 - Luma.OLED: Display drivers for SSD1306: [Link](https://github.com/rm-hull/luma.oled)
+- Python Imaging Library: [Link](https://github.com/python-pillow/Pillow)
 - VL53L0X Api port for Raspberry Pi: [Link](https://github.com/cassou/VL53L0X_rasp)
