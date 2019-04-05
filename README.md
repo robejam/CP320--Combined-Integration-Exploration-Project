@@ -3,6 +3,10 @@
 <p>Morgenne Besenschek</p>
 <p>James Robertson</p>
 
+### Block Diagram
+
+![Block Diagram](https://raw.githubusercontent.com/robejam/CP320--Combined-Integration-Exploration-Project/master/Block%20Diagram.png)
+
 ### Video
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=XyRx3iDWlRw
 " target="_blank"><img src="http://img.youtube.com/vi/XyRx3iDWlRw/0.jpg" 
