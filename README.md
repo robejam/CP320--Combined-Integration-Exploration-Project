@@ -8,6 +8,9 @@
 " target="_blank"><img src="http://img.youtube.com/vi/XyRx3iDWlRw/0.jpg" 
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
+### Biggest Challenges
+
+We ran into a roadblock at the beginning of the project with the joystick refusing to function despite all efforts to debug potential software and hardware issues. After spending an entire class trying to figure out the issue, [this](https://www.raspberrypi.org/forums/viewtopic.php?t=213951#p1323337) forum post ended up highlighting the importance of the SPI max_speed_hz option.
 
 ### Components Used
 - Stepper Motor: [Link](http://sayal.com/STORE/View_SPEC.asp?SKU=162138)
