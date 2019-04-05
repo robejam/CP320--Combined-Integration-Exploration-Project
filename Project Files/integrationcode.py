@@ -14,8 +14,8 @@ import time
 #Joystick configuration
 JOYSTICK_SPEED_HZ = 1350000
 MIN_JOYSTICK_SLEEP = 0.002
-lr_channel = 1
-ud_channel = 0
+LR_CHANNEL = 1
+UD_CHANNEL = 0
 
 #OLED device configuration
 OLED_ADDRESS = 0x3C
@@ -66,6 +66,11 @@ stepper_sequence.append([GPIO.LOW, GPIO.LOW, GPIO.HIGH,GPIO.HIGH])
 stepper_sequence.append([GPIO.LOW, GPIO.LOW, GPIO.LOW,GPIO.HIGH])
 stepper_sequence.append([GPIO.HIGH, GPIO.LOW, GPIO.LOW,GPIO.HIGH])
 
+def read_channel(adc_channel):
+    adc=spi.xfer2([1,(8+adc_channel)<<4,0])
+    data=((adc[1]&3)<<8) +adc[2]
+    return data
+
 def move_clockwise(slp):
     for row in stepper_sequence:
         GPIO.output(stepper_pins,row)
@@ -75,12 +80,6 @@ def move_counterclockwise(slp):
     for row in reversed (stepper_sequence):
         GPIO.output(stepper_pins,row)
         time.sleep(slp)
-
-def read_channel(adc_channel):
-    adc=spi.xfer2([1,(8+adc_channel)<<4,0])
-    data=((adc[1]&3)<<8) +adc[2]
-    return data
-
 
 def abs_x_pos(lr_pos):
     if lr_pos > 516:
@@ -144,8 +143,8 @@ print("Type Ctrl+C to quit")
 try:
     while True:
         #Read Joystick input
-        lr_pos = read_channel(lr_channel)
-        ud_pos = read_channel(ud_channel)
+        lr_pos = read_channel(LR_CHANNEL)
+        ud_pos = read_channel(UD_CHANNEL)
         abs_x = abs_x_pos(lr_pos)
         abs_y = abs_y_pos(ud_pos)
         val = abs_x
