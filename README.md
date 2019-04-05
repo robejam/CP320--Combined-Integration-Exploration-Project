@@ -3,6 +3,18 @@
 <p>Morgenne Besenschek</p>
 <p>James Robertson</p>
 
+### Overview
+
+This circuit highlights the use of a joystick to control the connected devices. By moving the joystick left or right, the stepper motor will move clockwise or counterclockwise. Moving the motor changes the position of the time of flight sensor, which detects how close an object is. Users can move the sensor back and forth, and view how far away the sensor is from the other side of the device by reading the OLED screen.
+
+Features we implemented:
+- Converts joystick output values to a familiar scale, where neutral joystick position is at (0,0): [joystick.py](https://github.com/robejam/CP320--Combined-Integration-Exploration-Project/blob/master/Project%20Files/joystick.py)
+- Controlling a stepper motor using a joystick: [joystickstepper.py](https://github.com/robejam/CP320--Combined-Integration-Exploration-Project/blob/master/Project%20Files/joystickstepper.py)
+
+Moving the joystick left or right moves the stepper motor counterclockwise or clockwise. The stepper motor moves faster the further away from neutral the joystick is.
+
+Full circuit integration can be viewed [here.](https://github.com/robejam/CP320--Combined-Integration-Exploration-Project/blob/master/Project%20Files/integrationcode.py)
+
 ### Block Diagram
 
 ![Block Diagram](https://raw.githubusercontent.com/robejam/CP320--Combined-Integration-Exploration-Project/master/Block%20Diagram.png)
