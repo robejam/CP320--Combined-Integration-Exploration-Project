@@ -9,7 +9,7 @@ ud_channel = 0
 
 spi=spidev.SpiDev()
 spi.open(0,0)
-spi.max_speed_hz = 1250000
+spi.max_speed_hz = 1350000
 
 GPIO.setmode(GPIO.BCM)
 stepper_pins=[12,13,18,19]
