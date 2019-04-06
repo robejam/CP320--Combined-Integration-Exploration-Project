@@ -1,4 +1,5 @@
-# CP320-Combined Integration Exploration Project (Winter 2019)
+# CP320-Combined Integration Exploration Project  
+# (Winter 2019)
 ### By:
 <p>Morgenne Besenschek</p>
 <p>James Robertson</p>
