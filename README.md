@@ -37,8 +37,6 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
 - The `sleep(val)` function in [joystickstepper.py](https://github.com/robejam/CP320--Combined-Integration-Exploration-Project/blob/master/Project%20Files/joystickstepper.py) was another key thing for us to implement for stepper control as it allowed us to ramp the speed of the stepper motor shaft based on the position of the joystick. The function relies on the linear equation `slp(val) = -0.00018 * val + 0.1` where `val` is the absolute joystick value. The function computes a value between 0.1 and 0.01, the higher the number the more time there is between `stepper_sequence` rows causing the shaft to rotate slower and the inverse effect if the value is closer to 0.01.
 
-Full circuit integration can be viewed [here.](https://github.com/robejam/CP320--Combined-Integration-Exploration-Project/blob/master/Project%20Files/integrationcode.py)
-
 ### Block Diagram
 
 ![Block Diagram](https://raw.githubusercontent.com/robejam/CP320--Combined-Integration-Exploration-Project/master/Block%20Diagram.png)
