@@ -60,28 +60,12 @@ def abs_y_pos(ud_pos):
     return abs_pos
 
 def sleep(val):
+# Determines stepper sleep time based on the current position of the joystick
+# The further the joystick is moved, the faster the motor moves. This is caused
+# by the linear equation in the function based on the points (0,0.1) & (500, 0.01)
+# from joystick data.
     val = abs(val)
-    slp = 0
-    if val < 51.6:
-        slp = 0.1 
-    elif val < 103.2:
-        slp = 0.09
-    elif val < 154.8:
-        slp = 0.08
-    elif val < 206.4:
-        slp = 0.07
-    elif val < 258.0:
-        slp = 0.06
-    elif val < 309.6:
-        slp = 0.05
-    elif val < 361.2:
-        slp = 0.04
-    elif val < 412.8:
-        slp = 0.03
-    elif val < 464.0:
-        slp = 0.02
-    else:
-        slp = 0.01
+    slp = -0.00018 * val + 0.1
     return slp
 
 try:		
